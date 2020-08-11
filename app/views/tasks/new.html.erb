@@ -1,0 +1,11 @@
+<h1>Add a new task</h1>
+
+<div class="form-group text-center">
+<%= form_for(@task) do |f| %>
+  <%= f.text_field :name, placeholder: 'Title', class: 'form-control m-3 col-6 mx-auto' %>
+  <%= f.text_field :details, placeholder: 'Details', class: 'form-control m-3 col-6 mx-auto' %>
+  <%= f.submit 'Create', class: 'btn btn-info m-3' %>
+<% end %>
+</div>
+<br>
+<%= link_to 'Back to list', tasks_path %>

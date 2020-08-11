@@ -1,0 +1,15 @@
+<h1>Update your task: <%= @task.name %></h1>
+
+<div class="form-group text-center">
+  <%= form_for(@task) do |f| %>
+    <%= f.text_field :name, class: 'form-control m-3 col-6 mx-auto' %>
+    <%= f.text_field :details, class: 'form-control m-3 col-6 mx-auto' %>
+    <%= f.check_box :completed, value: 'Task' %>
+    <%= f.label :completed, "Task completed" %>
+    <div>
+      <%= f.submit "Edit", class: 'btn btn-info m-3' %>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= link_to 'Back to list', tasks_path %>
